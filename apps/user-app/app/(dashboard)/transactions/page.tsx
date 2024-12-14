@@ -1,6 +1,11 @@
+import { OnRampTransactions } from "../../../components/OnRampTransactions";
+import { getOnRampTransactions } from "../transfer/page";
 
-export default function() {
+export default async function() {
+    const transactions = await getOnRampTransactions();
     return <div>
-        Transactions
+        <div className="content-center">
+            <OnRampTransactions transactions={transactions} />
+        </div>
     </div>
 }
