@@ -8,11 +8,11 @@ export function AppbarClient() {
   const router = useRouter();
 
   return (
-   <div>
-      <Appbar onSignin={signIn} onSignout={async () => {
+                    <div>
+          <Appbar onSignin={signIn} onSignout={async () => {
         await signOut()
-        router.push("/api/auth/signin")
+            router.push("/api/auth/signin")
       }} user={session.data?.user} />
-   </div>
+    </    div>
   );
 }
