@@ -1,7 +1,6 @@
 "use client"
 import { Button } from "@repo/ui/button";
 import { Card } from "@repo/ui/card";
-import { Center } from "@repo/ui/center";
 import { Select } from "@repo/ui/select";
 import { useState } from "react";
 import { TextInput } from "@repo/ui/textinput";
@@ -18,7 +17,7 @@ const SUPPORTED_BANKS = [{
 export const AddMoney = () => {
     const [redirectUrl, setRedirectUrl] = useState(SUPPORTED_BANKS[0]?.redirectUrl);
     const [amount,setAmount] = useState(0);
-    const [provider, setProvider] = useState(SUPPORTED_BANKS[0]?.redirectUrl || '');
+    const [provider] = useState(SUPPORTED_BANKS[0]?.redirectUrl || '');
 
     return <Card title="Add Money">
     <div className="w-full">
